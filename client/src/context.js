@@ -50,7 +50,7 @@ const ProductProvider = ({ children }) => {
     let tempProducts = [];
 
     try {
-      const storeProducts = await phoneDataApi.get("/products");
+      const storeProducts = await phoneDataApi.get("/api/v1/products");
 
       storeProducts.data.data.forEach((item) => {
         const singleItem = { ...item };
@@ -98,7 +98,7 @@ const ProductProvider = ({ children }) => {
 
   const handleDetail = async (id) => {
     try {
-      const storeProduct = await phoneDataApi.get(`/products/${id}`);
+      const storeProduct = await phoneDataApi.get(`/api/v1/products/${id}`);
       setState((state) => ({
         ...state,
         detailProduct: storeProduct.data.data,
