@@ -1,0 +1,24 @@
+:root {
+  --mainBrown: #363434;
+  --lightGray: #5830c7;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background: var(--mainWhite);
+  color: var(--mainDark);
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
