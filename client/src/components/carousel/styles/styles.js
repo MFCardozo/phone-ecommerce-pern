@@ -75,7 +75,7 @@ export const STextWrapper = styled.div`
   position: sticky;
   height: 0;
   color: #f7f7f7;
-  top: 32rem;
+  top: 74vh;
 
   opacity: 0.85;
   & h1 {
@@ -83,5 +83,14 @@ export const STextWrapper = styled.div`
   }
   & p {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    & h1 {
+      font-size: 2.5rem;
+    }
+    & p {
+      font-size: 1.2rem;
+    }
   }
 `;

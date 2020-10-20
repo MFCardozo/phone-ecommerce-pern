@@ -17,7 +17,7 @@ export default function Navbar() {
   } = useContext(ProductContext);
 
   return (
-    <NavWrapper className="navbar navbar-expand-sm align-items-center  px-sm-5">
+    <NavWrapper className="navbar navbar-expand-sm align-items-center py-0 px-sm-5">
       <Link to="/" onClick={() => cleanFilteredSearch()}>
         <img src={logo} alt="store logo" className="navbar-brand" />
       </Link>

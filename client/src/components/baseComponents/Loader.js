@@ -5,15 +5,16 @@ export const PageLoader = () => {
 };
 const Loader = styled.div`
   animation: loading 1.1s infinite linear;
-  border: 1.1em solid rgba(0, 0, 0, 0.2);
-  border-left: 1.1em solid #000000;
+  border: 1.1vw solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1vw solid #000000;
   border-radius: 50%;
-  height: 6em;
-  left: calc(50% - 4em);
+  height: 12vw;
+  left: calc(50% - 4vw);
   position: absolute;
-  top: calc(50% - 4em);
+
+  top: calc(50% - 4vw);
   transition: opacity 0.3s;
-  width: 6em;
+  width: 12vw;
 
   @keyframes loading {
     0% {
