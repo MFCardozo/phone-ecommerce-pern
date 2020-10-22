@@ -8,7 +8,7 @@ export const ButtonModel = styled.button`
   border-radius: 100vh;
   color: ${(prop) => (prop.back ? "var(--mainBrown)" : "var(--lightGray)")};
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.2rem 0.5rem;
   margin: 0.2rem 0.5rem 0.2rem 0;
 
