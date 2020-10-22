@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const NavWrapper = styled.nav`
   background: var(--mainBrown);
   opacity: 0.85;
-  max-height: 9vh;
+  height: 9%;
+  min-height: 54px;
   top: 0;
   position: fixed;
   width: 100%;
