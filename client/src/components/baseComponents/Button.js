@@ -12,7 +12,8 @@ export const ButtonModel = styled.button`
   padding: 0.2rem 0.5rem;
   margin: 0.2rem 0.5rem 0.2rem 0;
 
-  height: 2.7rem;
+  height: 6vh;
+  min-height: 44px;
   transition: all 0.5s ease-in-out;
   text-transform: capitalize;
 
