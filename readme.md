@@ -7,3 +7,7 @@
 
 
 A demo Ecommerce building with PERN stack (Postgresql,Express,React and Node) [link to Project!](https://phone-ecommerce-pern.herokuapp.com/)
+
+Other technologies used:
+-Bootstrap
+-Styled-components
