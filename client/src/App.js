@@ -8,7 +8,7 @@ import Details from "./components/details/Details";
 import Default from "./components/page404/Default";
 import Modal from "./components/main/Modal";
 import Cart from "./components/cart/Cart";
-
+import Footer from "./components/main/Footer";
 class App extends Component {
   render() {
     return (
@@ -23,6 +23,7 @@ class App extends Component {
         </Switch>
 
         <Modal />
+        <Footer />
       </>
     );
   }
