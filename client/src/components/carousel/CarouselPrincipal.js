@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   ContainerCarousel,
   CarouselTrackWrapper,
@@ -18,19 +18,21 @@ const CarouselPrincipal = ({ children }) => {
   ));
 
   const leftSlideClick = () => {
-    setCurrentSlide(
+    return setCurrentSlide(
       (currentSlide - 1 + activeSlide.length) % activeSlide.length
     );
   };
 
-  const rigthSlideClick = () => {
+  //useCallback its for better useEffect hook performance
+
+  const rigthSlideClickCallback = useCallback(() => {
     setCurrentSlide((currentSlide + 1) % activeSlide.length);
-  };
+  }, [currentSlide, activeSlide.length]);
 
   useEffect(() => {
-    const interval = setInterval(() => rigthSlideClick(), 5000);
+    const interval = setInterval(() => rigthSlideClickCallback(), 5000);
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [rigthSlideClickCallback]);
 
   return (
     <ContainerCarousel>
@@ -49,7 +51,7 @@ const CarouselPrincipal = ({ children }) => {
         </CarouselButton>
         <CarouselButton
           onClick={() => {
-            rigthSlideClick();
+            rigthSlideClickCallback();
           }}
         >
           <i className="fas fa-angle-right"></i>

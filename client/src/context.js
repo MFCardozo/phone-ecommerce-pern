@@ -24,7 +24,7 @@ const ProductProvider = ({ children }) => {
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
-    addTotalToCart();
+    addTotalToCart(state.cart);
 
     setProducts();
   }, [state.cart]);
@@ -183,10 +183,10 @@ const ProductProvider = ({ children }) => {
     }));
   };
 
-  const addTotalToCart = () => {
+  const addTotalToCart = (cart) => {
     let subTotal = 0;
 
-    for (let item of state.cart) {
+    for (let item of cart) {
       subTotal += item.total;
     }
 

@@ -19,10 +19,12 @@ export default function Details() {
   } = useContext(ProductContext);
 
   useEffect(() => {
-    handleDetail(id);
+    if (id) {
+      handleDetail(id);
+    }
 
     return () => cleanHandleDetail();
-  }, []);
+  }, [id]);
 
   const idNumber = parseInt(id);
 
